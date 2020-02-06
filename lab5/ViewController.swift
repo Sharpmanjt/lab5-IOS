@@ -10,13 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let x = Dog(name: "Peanut", owner: "Tim", breed: "Bulldog", age: 2)
     
+    let x = Dog(name: "Peanut", owner: "Tim", breed: "Bulldog", age: 2)
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        print(x.printSum(x:2, y:3));
         print("trace message: viewDidLoad")
     }
+    
     
     
     @IBOutlet weak var txtName: UITextField!
@@ -29,7 +31,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtAge: UITextField!
     
     @IBAction func btnViewAge(_ sender: Any) {
-        
+        txtAge.text = String(x.Age);
+        var y:Int = Int(txtAge.text!)!
+        y = y+1
+        txtAge.text = String(y)
     }
     
     @IBAction func btnViewDog(_ sender: Any) {

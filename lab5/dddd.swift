@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Dog {
+public class Dog {
     var Name: String;
     var Owner: String;
     var Breed: String;
@@ -21,8 +21,8 @@ class Dog {
         self.Age = age;
     }
     
-    func sayHello(){
-        print("Say Hello");
+    public func printSum(x:Int, y:Int)->Int{
+        return(x+y);
     }
     
     func incrementAge(age:Int, incAmt:Int) -> Int{
